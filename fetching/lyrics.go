@@ -7,11 +7,11 @@ import (
 )
 
 func FetchLyrics(song string, artist string) string {
-	l := lyrics.New()
+	l := lyrics.New(lyrics.WithGeniusLyrics("No"))
 	lyric, err := l.Search(artist, song)
-
 	if err != nil {
-		fmt.Printf("Lyrics for %v-%v were not found", artist, song)
+		fmt.Printf("%v: Lyrics for %v-%v were not found", err, artist, song)
 	}
 	return lyric
+
 }
