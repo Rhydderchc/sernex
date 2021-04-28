@@ -15,6 +15,7 @@ type Lyrics struct {
 
 func main() {
 	server := fiber.New()
+	server.Static("/", './public') //serving static reactjs
 	api := server.Group("/api")
 	v1 := api.Group("/v1")
 	v1.Get("/", func(ctx *fiber.Ctx) error {
