@@ -1,8 +1,6 @@
 package main
 
 import (
-	"fmt"
-
 	"github.com/Rhydderchc/Sernex/fetching"
 	"github.com/gofiber/fiber/v2"
 )
@@ -28,8 +26,12 @@ func main() {
 		var artist string = ctx.Query("artist")
 		var song string = ctx.Query("song")
 		lyrics := fetching.FetchLyrics(artist, song)
-		fmt.Println(lyrics)
-		return ctx.SendString(lyrics + "\n")
+
+		return ctx.JSON(fiber.Map{
+			"song":   song,
+			"artist": artist,
+			"lyrics": lyrics,
+		})
 	})
 	space := v1.Group("/space")
 	space.Get("/dailypicture", func(ctx *fiber.Ctx) error {
