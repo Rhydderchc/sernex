@@ -13,5 +13,5 @@ func FetchLyrics(song string, artist string) string {
 	if err != nil {
 		fmt.Printf("Lyrics for %v-%v were not found", artist, song)
 	}
-	return string(lyric)
+	return lyric
 }
