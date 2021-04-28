@@ -8,6 +8,7 @@ import {BrowserRouter as Router, Link} from 'react-router-dom';
 
 const styles = makeStyles({
     bar:{
+        display:"flex",
         paddingTop: "1.15rem",
         backgroundColor: "#fff",
         ['@media (max-width:780px)']: { 
@@ -42,30 +43,26 @@ function NavBar() {
     const classes = styles()
     return (
             <Toolbar position="sticky" color="rgba(0, 0, 0, 0.87)" className={classes.bar}>   
-                <img src={logo} className={classes.logo}/> 
+                <img src={logo} className={classes.logo}></img> 
                 <img src={logoMobile} className={classes.logoMobile}/>
-                <Router>
                 <Typography variant="h6" className={classes.menuItem}>
-                <Link onClick={() => {window.location.href="/about"}}> 
+                <Link onClick={() => {window.location.href="/"}} style={{textDecoration: "none"}}>
+                    Home
+                </Link>   
+                </Typography>
+                <Typography variant="h6" className={classes.menuItem}>
+                <Link onClick={() => {window.location.href="/about"}} style={{textDecoration: "none"}}> 
                    About
                 </Link>
                 </Typography>
-                </Router>
                 <Typography variant="h6" className={classes.menuItem}>
-                    Blog
-                </Typography>
-                <Typography variant="h6" className={classes.menuItem}>
-                    Careers
-                </Typography>
-                <Typography variant="h6" className={classes.menuItem}>
-                    Demos 
-                </Typography>
-                <Typography variant="h6" className={classes.menuItem}>
-                <Link onClick={() => {window.location.href="/contact"}}>
+                <Link onClick={() => {window.location.href="/contact"}}style={{textDecoration: "none"}}>
                     Contact Us 
                 </Link>
                 </Typography>
+                <a href="https://github.com/Rhydderchc/sernex">
                 <CustomBtn txt="Try Our Product"/>
+                </a>
             </Toolbar>
     )
 }

@@ -22,9 +22,9 @@ function Grid(props) {
         <div className={classes.wrapper}>
             <div className={classes.item}>{icon}</div>
             <Typography className={classes.item} variant="h5">{title}</Typography>
-            <div className={classes.item}>
+            {/* <div className={classes.item}>
                 <CustomBtn  txt={btnTitle}/>
-            </div>
+            </div> */}
         </div>
     )
 }
