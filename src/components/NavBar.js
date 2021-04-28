@@ -1,7 +1,7 @@
 import React from 'react'
 import CustomBtn from './CustomBtn'
-import logo from '../logo.svg'
-import logoMobile from '../logoMobile.svg'
+import logo from '../sernex.svg'
+import logoMobile from '../sernexMobile.svg'
 import {Toolbar, Typography} from '@material-ui/core'
 import {makeStyles} from "@material-ui/core/styles"
 import {BrowserRouter as Router, Link} from 'react-router-dom';
