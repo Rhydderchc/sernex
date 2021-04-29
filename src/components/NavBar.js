@@ -10,13 +10,14 @@ const styles = makeStyles({
     bar:{
         display:"flex",
         paddingTop: "1.15rem",
-        backgroundColor: "#fff",
+        paddingBottom: "1.15rem",
+        backgroundColor: "#5cdb95",
         ['@media (max-width:780px)']: { 
            flexDirection: "column"
           }
     },
     logo: {
-        width: "15%", 
+        width: "25%", 
         ['@media (max-width:780px)']: { 
            display: "none"
            }
@@ -29,13 +30,21 @@ const styles = makeStyles({
             }
     },
     menuItem: {
+        fontFamily: "Roboto+Condensed",
+        textTransform:"uppercase",
         cursor: "pointer", 
-        flexGrow: 1,
-        "&:hover": {
-            color:  "#4f25c8"
+        paddingLeft: "1rem",
+        paddingRight: "5rem",
+        '&:hover':{
+            textDecoration: "underline",
         },
         ['@media (max-width:780px)']: { 
             paddingBottom: "1rem"    }
+    },
+    button: {
+        marginLeft: "20rem",
+        ['@media (max-width:780px)']: { 
+            marginLeft: "-4rem"   }
     }
 })
 
@@ -45,23 +54,25 @@ function NavBar() {
             <Toolbar position="sticky" color="rgba(0, 0, 0, 0.87)" className={classes.bar}>   
                 <img src={logo} className={classes.logo}></img> 
                 <img src={logoMobile} className={classes.logoMobile}/>
-                <Typography variant="h6" className={classes.menuItem}>
-                <Link onClick={() => {window.location.href="/"}} style={{textDecoration: "none"}}>
+                <Typography variant="h7" className={classes.menuItem} >
+                <Link onClick={() => {window.location.href="/"}} style={{textDecoration: "none", color: "#05386b"}}>
                     Home
                 </Link>   
                 </Typography>
-                <Typography variant="h6" className={classes.menuItem}>
-                <Link onClick={() => {window.location.href="/about"}} style={{textDecoration: "none"}}> 
+                <Typography variant="h7" className={classes.menuItem}>
+                <Link onClick={() => {window.location.href="/about"}} style={{textDecoration: "none", color: "#05386b"}}> 
                    About
                 </Link>
                 </Typography>
-                <Typography variant="h6" className={classes.menuItem}>
-                <Link onClick={() => {window.location.href="/contact"}}style={{textDecoration: "none"}}>
+                <Typography variant="h7" className={classes.menuItem}>
+                <Link onClick={() => {window.location.href="/contact"}}style={{textDecoration: "none", color: "#05386b"}}>
                     Contact Us 
                 </Link>
                 </Typography>
-                <a href="https://github.com/Rhydderchc/sernex">
+                <a href="https://github.com/Rhydderchc/sernex" style={{textDecoration: "none"}}>
+                <Typography className={classes.button}>
                 <CustomBtn txt="Try Our Product"/>
+                </Typography>
                 </a>
             </Toolbar>
     )

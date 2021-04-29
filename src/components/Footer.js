@@ -6,6 +6,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 
 function Footer() {
     return (
+      <div style={{backgroundColor: "#edf5e1"}}>
         <BottomNavigation >
           <a href="https://www.facebook.com/">
           <BottomNavigationAction color="red" label="Facebook" value="recents" icon={<FacebookIcon  style={{fill: "#3b5998"}}/>} />
@@ -17,6 +18,7 @@ function Footer() {
           <BottomNavigationAction label="Instagram" value="nearby" icon={<InstagramIcon  style={{fill: " #C13584"}}/>} />
           </a>
         </BottomNavigation>
+      </div>
 )
 }
 

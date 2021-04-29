@@ -5,19 +5,20 @@ import {withStyles} from '@material-ui/core/styles'
 const StyledButton = withStyles({
     root: {
         display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
+        alignContent: "flex-end",
+        alignItems: "centre",
+        justifyContent: "centre",
         height: "44px",
         padding: "0 25px",
         boxSizing: "border-box",
-        borderRadius: 0, 
-        background: "#4f25f7",
+        borderRadius: "20px", 
+        background: "#05386b",
         color: "#fff",
         transform: "none",
-        boxShadow: "6px 6px 0 0 #c7d8ed",
+        boxShadow: "6px 6px 0 0 #edf5e1",
         transition: "background .3s,border-color .3s,color .3s",
         "&:hover": {
-            backgroundColor:  "#4f25f7"
+            backgroundColor:  "#5cdb95"
           },
     },
     label: {
