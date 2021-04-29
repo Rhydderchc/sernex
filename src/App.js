@@ -6,10 +6,9 @@ import Home from './Pages/Home'
 import './App.css';
 
 function App() {
-  //const classes = styles(); 
 
   return (
-    <div className="App">
+    <div className="App" style={{backgroundColor:"#5cdb95"}}>
       <Router>
         <Switch>
         <Route path='/' exact component={Home}/>
