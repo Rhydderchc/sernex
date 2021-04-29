@@ -15,10 +15,13 @@ import HttpIcon from '@material-ui/icons/Http';
 const theme = createMuiTheme({
     palette: {
       primary: {
-        main:"#2e1667",
+        main:"#05386b",
       },
       secondary: {
-        main:"#c7d8ed",
+        main:"#5cdb95",
+      },
+      tertiary: {
+        main:"#edf5e1",
       },
     },
     typography: {
@@ -41,7 +44,7 @@ const theme = createMuiTheme({
     wrapper: {
       width: "65%",
       margin: "auto",
-      textAlign: "center"
+      textAlign: "center",
     },
     bigSpace: {
       marginTop: "5rem"
@@ -62,22 +65,22 @@ function Home() {
         <ThemeProvider theme={theme}>
         <NavBar/>
     <div className={classes.wrapper}>
-      <Typography variant="h4" className={classes.bigSpace} color="primary">
+      <Typography variant="h4" className={classes.bigSpace} style={{color:theme.palette.tertiary.main, wordSpacing: "0.4rem", letterSpacing: "0.15rem"}}>
          At Sernex.tech, we work on APIs that help!
       </Typography>
-      <Typography variant="h5" className={classes.littleSpace} color="primary">
+      <Typography variant="h5" className={classes.littleSpace} style={{color:theme.palette.tertiary.main, textAlign: "justify", lineHeight:"2.5rem"}}>
         Sernex is a group of small developers who bring you the best of the APIs that you might ever need for you project. We have APIs for Music Lyrics, Space Info, Image Manipulation, all waiting to be used in software built by YOU! So, don't wait, get an API key and start building your application with Sernex.
       </Typography>
     </div>
     <div className={`${classes.grid} ${classes.bigSpace}`}>
-      <Grid icon={<SecurityIcon style={{fill: "#4360A6", height:"125", width:"125"}}/>}  title="Secure" btnTitle="Show me More" />
-      <Grid icon={<EventNoteIcon style={{fill: "#449A76", height:"125", width:"125"}}/>} title="Reliable" btnTitle="Show me More"/>
-      <Grid icon={<TrendingUpIcon style={{fill: "#D05B2D", height:"125", width:"125"}}/>}  title="Performant" btnTitle="Show me More"/>
+      <Grid icon={<SecurityIcon style={{fill: "#05386b", height:"125", width:"125"}}/>}  title="Secure" />
+      <Grid icon={<EventNoteIcon style={{fill: "#05386b", height:"125", width:"125"}}/>} title="Reliable" />
+      <Grid icon={<TrendingUpIcon style={{fill: "#05386b", height:"125", width:"125"}}/>}  title="Performant" />
     </div>
     <div className={`${classes.grid} ${classes.littleSpace}`}>  
-      <Grid icon={<ImportExportIcon style={{fill: "#5EA780", height:"125", width:"125"}}/>}  title="Modular" btnTitle="Show me More"/>
-      <Grid icon={<ComputerIcon style={{fill: "#E69426", height:"125", width:"125"}}/>}  title="Multi-Platform" btnTitle="Show me More"/>
-      <Grid icon={<HttpIcon style={{fill: "#2EA09D", height:"125", width:"125"}}/>} title="Connected" btnTitle="Show me More"/>
+      <Grid icon={<ImportExportIcon style={{fill: "#05386b", height:"125", width:"125"}}/>}  title="Modular" />
+      <Grid icon={<ComputerIcon style={{fill: "#05386b", height:"125", width:"125"}}/>}  title="Multi-Platform" />
+      <Grid icon={<HttpIcon style={{fill: "#05386b", height:"125", width:"125"}}/>} title="Connected" />
     </div>
     <div className={classes.bigSpace}>
       <Footer/>

@@ -42,6 +42,7 @@ const theme = createMuiTheme({
       marginTop: "2.5rem",
     },
     title:{
+        color:"#edf5e1",
         justifyContent: "centre",
         alignItems: "centre",
         paddingTop: "2.5rem",
@@ -51,6 +52,7 @@ const theme = createMuiTheme({
         fontFamily: "Montserrat",
     },
     grid:{
+      color: "#edf5e1",
       display: "flex", 
       justifyContent: "center",
       alignItems: "center",
